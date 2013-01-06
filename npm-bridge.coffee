@@ -22,4 +22,4 @@ importModule = (modulePath, moduleVar) ->
 # example after creating ./public/node_modules and running npm install cheerio:
 importModule "cheerio", "Cheerio"
 
-# then you'd access cheerio by calling Modules.cheerio from anywhere
+# then you'd access Cheerio by calling Modules.Cheerio from anywhere
