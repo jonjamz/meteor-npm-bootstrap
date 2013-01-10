@@ -1,4 +1,4 @@
-meteor-npm-bridge
+meteor-npm
 =================
 
 This file, written in CoffeeScript, allows you to easily import NPM modules into a Meteor project.
