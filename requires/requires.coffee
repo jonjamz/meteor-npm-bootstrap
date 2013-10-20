@@ -1,11 +1,28 @@
-# Anything involving Node's "require" (besides NPM modules) goes here
+# Node.js and NPM packages
 
 @requires = {
-  require: __meteor_bootstrap__.require
+  NpmReq: (n) ->
+    Npm.require n
+  MeteorReq: (n) ->
+    Meteor.require n
+  addNpmReq: (names...) ->
+    for n in names
+      requires[n] = requires.NpmReq n
+  addMeteorReq: (names...) ->
+    for n in names
+      requires[n] = new requires.MeteorReq n
 }
 
-requires.addRequire = (names...) ->
-  _.each names, (name) ->
-    requires[name] = requires.require name
+requires.addNpmReq 'fs',
+  'util'
+  'path'
+  'child_process'
+  'http'
+  'querystring'
 
-requires.addRequire 'request', 'fs', 'querystring', 'util', 'path'
+requires.addMeteorReq 'urlparse',
+  'cheerio'
+  'string'
+
+@Fiber = requires.NpmReq 'fibers'
+@Future = requires.NpmReq 'fibers/future'
