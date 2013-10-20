@@ -19,6 +19,8 @@
       requires[n] = new requires.MeteorReq n
 }
 
+# Specify the packages to load
+# ----------------------------
 requires.addNpmReq 'fs',
   'util'
   'path'
@@ -30,5 +32,7 @@ requires.addMeteorReq 'urlparse',
   'cheerio'
   'string'
 
+# We're loading these with the global Fiber and Future vars because it matches the Meteor Async Guide
+# https://gist.github.com/possibilities/3443021
 @Fiber = requires.NpmReq 'fibers'
 @Future = requires.NpmReq 'fibers/future'
