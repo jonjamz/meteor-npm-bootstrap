@@ -1,8 +1,8 @@
 meteor-npm
 =================
 
-This set of files, written in CoffeeScript, allow you to easily import NPM modules into a Meteor project.
+Written in CoffeeScript, this file helps you easily import NPM modules into a Meteor project by providing some example code for both Node and NPM requires.
 
-It should be placed in the ./server folder of your Meteor project. It will add module references to a globally available Modules object.
+It requires the [NPM Meteor package from Atmosphere](https://atmosphere.meteor.com/package/npm)
 
-An example is included in the file. 
+It should be placed in the /server folder of your Meteor project.. 
