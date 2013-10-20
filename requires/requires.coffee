@@ -1,13 +1,19 @@
 # Node.js and NPM packages
+# Once added here, access with requires.packageName
 
 @requires = {
+  
+  # This is for anything already included with the project, like Node.js modules or Fibers
   NpmReq: (n) ->
     Npm.require n
-  MeteorReq: (n) ->
-    Meteor.require n
   addNpmReq: (names...) ->
     for n in names
       requires[n] = requires.NpmReq n
+  
+  # This is for NPM packages that you'll specify in package.json with the NPM Atmosphere package
+  # https://atmosphere.meteor.com/package/npm
+  MeteorReq: (n) ->
+    Meteor.require n
   addMeteorReq: (names...) ->
     for n in names
       requires[n] = new requires.MeteorReq n
