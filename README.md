@@ -8,4 +8,4 @@ The file should be placed in the /server folder of your project.
 Dependencies
 ============
 
-You must install the [NPM Meteor package from Atmosphere](https://atmosphere.meteor.com/package/npm)
+You must install the [NPM Meteor package from Atmosphere](https://atmosphere.meteor.com/package/npm) for this to work.
