@@ -1,7 +1,7 @@
 About
 =====
 
-Written in CoffeeScript (and authored by me), this file provides some example code for requiring both Node and NPM modules in a Meteor project.
+Written in CoffeeScript (authored by me), this file provides some example code for requiring both Node and NPM modules in a Meteor project.
 
 It also sets up global Fiber and Future variables. This matches the Meteor Async Guide:
 https://gist.github.com/possibilities/3443021
